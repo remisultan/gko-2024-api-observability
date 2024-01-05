@@ -1,0 +1,54 @@
+= GKO 2024 - API Observability!
+
+== Introduction
+
+Make sure you are using python 3.10.x ()
+
+Welcome to the API Observability Hackathon! 🚀 In this event, we'll explore the fascinating realm of vector embeddings and demonstrate how they can revolutionize an API platform !
+
+*Challenge:* Implement an Observability API on different metrics of your web logs. Here are examples on how to do so:
+
+- API centric:
+ * Repartition of status code: Detect when irregular status codes happen
+ * Payload size: Identify anomalous payload sizes
+- User centric:
+ * GeoIP: Extract features from IP addresses to detect anomalous calls
+ * Devices: Identify from User-Agent
+
+The goal is not to do everything but to learn and have fun !
+
+*Data:*
+Here is the link to the data you need to work with:
+
+- Web Logs:
+    * link:https://drive.google.com/uc?confirm=t&export=download&id=1m9Otzb-kh5SmyQOC-6tJEODy3UKoZaw2[Parquet Format]
+
+To load the data with pandas
+```python
+import pandas as pd
+df = pd.read_parquet("logs_df.parquet").sample(frac=1)
+```
+
+In order to extract informations from IPS
+you will find here the MaxMind Databases you need
+https://drive.google.com/drive/folders/1KHXl0KxkXw0zdlPl4QwzdCkVh6TmgK3r
+
+But before digging in, check out the tutorials below !
+
+== Anomaly detection
+
+In order to understand how to detect anomaly detection works, you can find the tutorial in this
+link:https://colab.research.google.com/drive/1hS9tbfEhpPy4EMgkZaTgXUQMEWamQayt?usp=drive_link[Google Colab] link
+
+
+== Time to shine !
+
+Perfect! You are now a ML expert ! You know the drill, now make an awesome API, a fully-fledged app or integrate it to Gravitee.io directly !
+
+You can find in this repository an example of REST API in Python Flask.
+
+== Bonus
+
+- Plug link:https://documentation.gravitee.io/ae/overview/readme[Alert Engine] to your application when an anomaly is detected
+
+Get ready for an immersive and educational journey! Happy hacking! 👩‍💻👨‍💻
